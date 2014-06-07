@@ -1,5 +1,6 @@
 # box: olger/box-yeoman@0.5.1
-box: zdfs/Sonos-Suit@1.0.2
+# box: zdfs/Sonos-Suit@1.0.2
+box: marvinroger/astonish-wercker-box@0.2.4
 
 services:
     - wercker/mongodb
