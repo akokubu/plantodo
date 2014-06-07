@@ -1,5 +1,5 @@
 # box: wercker/nodejs
-box: zdfs/Sonos-Suit@1.0.2
+box: astonish/astonish-wercker-box@0.2.5
 
 services:
     - wercker/mongodb
