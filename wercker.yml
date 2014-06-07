@@ -1,10 +1,7 @@
-box: olger/box-yeoman@0.5.1
-# box: zdfs/Sonos-Suit@1.0.2
-# box: marvinroger/astonish-wercker-box@0.2.4
+box: wercker/nodejs
 
 services:
     - wercker/mongodb
-
 
 # Build definition
 build:
@@ -20,7 +17,7 @@ build:
         code: node_modules/bower/bin/bower install
 
     - grunt:
-        tasks: build
+        tasks: test
 
     # A custom script step, name value is used in the UI
     # and the code value contains the command that get executed
@@ -32,8 +29,6 @@ build:
 
 deploy:
     steps:
-      - npm-install
-      - olger/yeoman-bower-install
 
       - grunt:
           tasks: build
