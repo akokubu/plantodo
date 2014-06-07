@@ -1,7 +1,4 @@
-# box: wercker/nodejs
-# box: olger/box-yeoman@0.5.1
-# box: plasticine/aerobic.io@0.0.8
-box: pelle/ubuntu12.04-ruby2.0.0-heroku@1.0.2
+box: wercker/nodejs
 
 services:
     - wercker/mongodb
@@ -10,6 +7,13 @@ services:
 build:
   # The steps that will be executed on build
   steps:
+
+    - script:
+        name: install compass
+        code: |
+            sudo apt-get update
+            sudo apt-get ruby-compass
+
     # A step that executes `npm install` command
     - npm-install
 
