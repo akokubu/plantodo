@@ -36,6 +36,7 @@ deploy:
             npm config set ca "" --silent
             sudo npm install npm -g --silent
             sudo npm install -g --silent grunt-cli
+            sudo npm install -g --silent compass
             grunt build
 
       - heroku-deploy
