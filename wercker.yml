@@ -18,6 +18,7 @@ build:
             sudo apt-get install ruby-compass
             sudo apt-get install google-chrome-stable
             echo $CHROME_BIN
+            which google-chrome
 
     # A step that executes `npm install` command
     - npm-install
