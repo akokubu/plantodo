@@ -12,7 +12,7 @@ build:
         name: install compass
         code: |
             sudo apt-get update
-            sudo apt-get ruby-compass
+            sudo apt-get install ruby-compass
 
     # A step that executes `npm install` command
     - npm-install
