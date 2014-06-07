@@ -1,4 +1,4 @@
-box: olger/box-yeoman@0.5.1
+box: zdfs/Sonos-Suit@1.0.2
 
 services:
     - wercker/mongodb
@@ -9,16 +9,14 @@ build:
   # The steps that will be executed on build
   steps:
     # A step that executes `npm install` command
-    - wercker/npm-install
+    - npm-install
     - olger/yeoman-bower-install
-    - wercker/grunt:
-        tasks: build
 
-    - script:
+#    - script:
         # make sure that bower is listed in your package.json
         # use `npm install --save bower` to add it.
-        name: bower install
-        code: node_modules/bower/bin/bower install
+#        name: bower install
+#        code: node_modules/bower/bin/bower install
 
     - grunt:
         tasks: test
