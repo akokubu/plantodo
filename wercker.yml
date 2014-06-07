@@ -29,8 +29,9 @@ build:
 deploy:
     steps:
 
-      - grunt:
-          tasks: build
+      - script:
+          name: Deploy to heroku
+          code: |-
+            grunt build
 
       - heroku-deploy
-        
