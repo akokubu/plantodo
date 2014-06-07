@@ -36,4 +36,4 @@ deploy:
           name: Deploy to github pages
           code: cd dist
 
-      - heroku-deploy:
+      - heroku-deploy
