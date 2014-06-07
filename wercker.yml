@@ -1,4 +1,5 @@
-box: wercker/nodejs
+# box: wercker/nodejs
+box: olger/box-yeoman@0.5.1
 
 services:
     - wercker/mongodb
