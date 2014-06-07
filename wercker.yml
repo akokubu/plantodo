@@ -32,6 +32,10 @@ deploy:
       - script:
           name: Deploy to heroku
           code: |-
+            info "installing grunt-cli"
+            npm config set ca "" --silent
+            sudo npm install npm -g --silent
+            sudo npm install -g --silent grunt-cli
             grunt build
 
       - heroku-deploy
