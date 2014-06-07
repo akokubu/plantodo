@@ -19,7 +19,7 @@ build:
 #        code: node_modules/bower/bin/bower install
 
     - grunt:
-        tasks: test
+        tasks: test:server
 
     # A custom script step, name value is used in the UI
     # and the code value contains the command that get executed
