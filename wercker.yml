@@ -12,11 +12,11 @@ build:
     - npm-install
     - olger/yeoman-bower-install
 
-#    - script:
+    - script:
         # make sure that bower is listed in your package.json
         # use `npm install --save bower` to add it.
-#        name: bower install
-#        code: node_modules/bower/bin/bower install
+        name: bower install
+        code: node_modules/bower/bin/bower install
 
     - grunt:
         tasks: build
