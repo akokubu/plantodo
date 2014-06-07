@@ -31,6 +31,8 @@ build:
 
 deploy:
     steps:
+      - npm-install
+      - olger/yeoman-bower-install
 
       - grunt:
           tasks: build
