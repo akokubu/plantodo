@@ -1,4 +1,6 @@
-box: wercker/nodejs
+# box: wercker/nodejs
+box: zdfs/Sonos-Suit@1.0.2
+
 services:
     - wercker/mongodb
 
