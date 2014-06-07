@@ -32,4 +32,10 @@ deploy:
       - grunt:
           tasks: build
 
-      - heroku-deploy
+      - script:
+          name: Deploy to heroku
+          code: |-
+            cd dist
+            git add .
+            git commit -m "deploy"
+            git push heroku -f master
