@@ -32,8 +32,4 @@ deploy:
       - grunt:
           tasks: build
 
-      - script:
-          name: Deploy to github pages
-          code: cd dist
-
       - heroku-deploy
