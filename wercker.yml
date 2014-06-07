@@ -1,7 +1,8 @@
-box: zdfs/Sonos-Suit@1.0.2
+box: olger/box-yeoman@0.5.1
 
 services:
     - wercker/mongodb
+
 
 # Build definition
 build:
@@ -9,6 +10,7 @@ build:
   steps:
     # A step that executes `npm install` command
     - npm-install
+    - olger/yeoman-bower-install
 
     - script:
         # make sure that bower is listed in your package.json
