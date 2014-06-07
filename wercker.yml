@@ -1,5 +1,6 @@
 # box: wercker/nodejs
-box: olger/box-yeoman@0.5.1
+# box: olger/box-yeoman@0.5.1
+box: plasticine/aerobic.io@0.0.8
 
 services:
     - wercker/mongodb
