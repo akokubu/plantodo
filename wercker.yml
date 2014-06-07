@@ -9,8 +9,10 @@ build:
   # The steps that will be executed on build
   steps:
     # A step that executes `npm install` command
-    - npm-install
+    - wercker/npm-install
     - olger/yeoman-bower-install
+    - wercker/grunt:
+        tasks: build
 
     - script:
         # make sure that bower is listed in your package.json
