@@ -25,3 +25,15 @@ build:
         code: |
           echo "node version $(node -v) running"
           echo "npm version $(npm -v) running"
+
+deploy:
+    steps:
+
+      - grunt:
+          tasks: test
+
+      - script:
+          name: Deploy to github pages
+          code: cd dist
+
+      - heroku-deploy:
