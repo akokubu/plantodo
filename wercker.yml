@@ -1,4 +1,4 @@
-# box: wercker/nodejs
+#box: wercker/nodejs
 box: astonish/astonish-wercker-box@0.2.5
 
 services:
@@ -31,14 +31,7 @@ build:
 deploy:
     steps:
 
-      - script:
-          name: Deploy to heroku
-          code: |-
-            info "installing grunt-cli"
-            npm config set ca "" --silent
-            sudo npm install npm -g --silent
-            sudo npm install -g --silent grunt-cli
-            sudo npm install -g --silent compass
-            grunt build
+      - grunt:
+          tasks: build
 
       - heroku-deploy
