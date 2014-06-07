@@ -440,11 +440,10 @@ module.exports = function (grunt) {
 
     env: {
       test: {
-        NODE_ENV: 'test'
+        NODE_ENV: process.env.NODE_ENV || 'development'
       }
     }
   });
-
   // Used for delaying livereload until after server has restarted
   grunt.registerTask('wait', function () {
     grunt.log.ok('Waiting for server reload...');
