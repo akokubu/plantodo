@@ -30,7 +30,7 @@ deploy:
     steps:
 
       - grunt:
-          tasks: test
+          tasks: build
 
       - script:
           name: Deploy to github pages
